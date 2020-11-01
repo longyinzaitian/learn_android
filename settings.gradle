@@ -1,0 +1,5 @@
+include ':active_slot'
+include ':slot'
+include ':slot'
+include ':app'
+rootProject.name = "GradlePluginDemo"

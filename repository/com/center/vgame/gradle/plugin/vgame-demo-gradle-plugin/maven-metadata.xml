@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.center.vgame.gradle.plugin</groupId>
+  <artifactId>vgame-demo-gradle-plugin</artifactId>
+  <versioning>
+    <release>1.0.0</release>
+    <versions>
+      <version>1.0.0</version>
+    </versions>
+    <lastUpdated>20200620103440</lastUpdated>
+  </versioning>
+</metadata>
