@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.vgame.center.gradleplugindemo.ui.touch.CusViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.vgame.center.gradleplugindemo.ui.touch.SecondViewGroup
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white">
+
+            <com.vgame.center.gradleplugindemo.ui.touch.InnerView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary" />
+        </com.vgame.center.gradleplugindemo.ui.touch.SecondViewGroup>
+
+
+    </com.vgame.center.gradleplugindemo.ui.touch.CusViewGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

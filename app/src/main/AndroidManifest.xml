@@ -26,6 +26,8 @@
         <activity
             android:name=".ui.coordinator.TestAppbarNoChildAct"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.touch.TouchActivity"/>
     </application>
 
 </manifest>

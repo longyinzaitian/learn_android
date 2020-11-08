@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.vgame.center.gradleplugindemo.R;
 import com.vgame.center.gradleplugindemo.ui.coordinator.TestAppbarNoChildAct;
 import com.vgame.center.gradleplugindemo.ui.slot.SlotActivity;
+import com.vgame.center.gradleplugindemo.ui.touch.TouchActivity;
 
 public class NotificationsFragment extends Fragment implements View.OnClickListener {
 
@@ -40,6 +41,7 @@ public class NotificationsFragment extends Fragment implements View.OnClickListe
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.open_slot_btn).setOnClickListener(this);
         view.findViewById(R.id.open_coordinator_btn).setOnClickListener(this);
+        view.findViewById(R.id.open_test_touch_btn).setOnClickListener(this);
     }
 
     @Override
@@ -48,6 +50,8 @@ public class NotificationsFragment extends Fragment implements View.OnClickListe
             SlotActivity.launch(getActivity());
         } else if (v.getId() == R.id.open_coordinator_btn) {
             TestAppbarNoChildAct.launch(getActivity());
+        } else if (v.getId() == R.id.open_test_touch_btn) {
+            TouchActivity.start(getActivity());
         }
     }
 }
