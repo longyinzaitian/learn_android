@@ -50,7 +50,7 @@ class WebActivity: AppCompatActivity() {
 
             override fun onReceivedError(view: WebView?, errorCode: Int, description: String?, failingUrl: String?) {}
         }
-        //支持js
+
         //支持js
         mWebView.settings.javaScriptEnabled = true
         // 解决图片不显示
