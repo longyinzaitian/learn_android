@@ -36,7 +36,7 @@ class WebActivity: AppCompatActivity() {
         setContentView(R.layout.act_web)
 
         val mWebView = findViewById<WebView>(R.id.web_view)
-        //重新加载 点击网页里面的链接还是在当前的webview里跳转。不跳到浏览器那边
+
         //重新加载 点击网页里面的链接还是在当前的webview里跳转。不跳到浏览器那边
         mWebView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
