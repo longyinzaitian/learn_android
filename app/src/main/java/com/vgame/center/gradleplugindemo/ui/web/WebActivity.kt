@@ -60,7 +60,7 @@ class WebActivity: AppCompatActivity() {
             mWebView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
             WebView.setWebContentsDebuggingEnabled(true)
         }
-        //自适应屏幕
+
         //自适应屏幕
         mWebView.settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.NORMAL
         mWebView.settings.loadWithOverviewMode = true
