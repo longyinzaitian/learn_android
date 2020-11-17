@@ -53,7 +53,7 @@ class WebActivity: AppCompatActivity() {
 
         //支持js
         mWebView.settings.javaScriptEnabled = true
-        // 解决图片不显示
+
         // 解决图片不显示
         mWebView.settings.blockNetworkImage = false
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
