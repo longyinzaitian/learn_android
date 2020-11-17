@@ -1,5 +1,6 @@
 package com.vgame.center.gradleplugindemo.ui.web
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.net.http.SslError
@@ -29,6 +30,7 @@ class WebActivity: AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.act_web)
@@ -60,7 +62,7 @@ class WebActivity: AppCompatActivity() {
         }
         //自适应屏幕
         //自适应屏幕
-        mWebView.settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.SINGLE_COLUMN
+        mWebView.settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.NORMAL
         mWebView.settings.loadWithOverviewMode = true
         //设置可以支持缩放
         //设置可以支持缩放
