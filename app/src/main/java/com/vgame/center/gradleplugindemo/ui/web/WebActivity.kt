@@ -67,10 +67,10 @@ class WebActivity: AppCompatActivity() {
 
         //设置可以支持缩放
         mWebView.settings.setSupportZoom(false)
-        //扩大比例的缩放
+
         //扩大比例的缩放
         mWebView.settings.useWideViewPort = false
-        //设置是否出现缩放工具
+
         //设置是否出现缩放工具
         mWebView.settings.builtInZoomControls = false
 
