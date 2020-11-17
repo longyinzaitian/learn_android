@@ -64,7 +64,7 @@ class WebActivity: AppCompatActivity() {
         //自适应屏幕
         mWebView.settings.layoutAlgorithm = WebSettings.LayoutAlgorithm.NORMAL
         mWebView.settings.loadWithOverviewMode = true
-        //设置可以支持缩放
+
         //设置可以支持缩放
         mWebView.settings.setSupportZoom(false)
         //扩大比例的缩放
