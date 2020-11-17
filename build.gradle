@@ -2,6 +2,9 @@
 buildscript {
     ext.kotlin_version = '1.4.0'
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         google()
         jcenter()
         maven {
@@ -23,6 +26,9 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         google()
         jcenter()
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
