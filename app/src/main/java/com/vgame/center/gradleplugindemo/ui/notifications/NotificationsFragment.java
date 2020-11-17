@@ -22,6 +22,7 @@ public class NotificationsFragment extends Fragment implements View.OnClickListe
 
     private NotificationsViewModel notificationsViewModel;
 
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
