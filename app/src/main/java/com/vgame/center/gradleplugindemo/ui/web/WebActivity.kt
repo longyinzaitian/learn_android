@@ -30,8 +30,6 @@ class WebActivity: AppCompatActivity() {
         }
     }
 
-
-    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.act_web)
@@ -39,7 +37,7 @@ class WebActivity: AppCompatActivity() {
         val mWebView = findViewById<WebView>(R.id.web_view)
         //重新加载 点击网页里面的链接还是在当前的webview里跳转。不跳到浏览器那边
         //重新加载 点击网页里面的链接还是在当前的webview里跳转。不跳到浏览器那边
-        mWebView.setWebViewClient(object : WebViewClient() {
+        mWebView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                 return false
             }
@@ -50,7 +48,7 @@ class WebActivity: AppCompatActivity() {
             }
 
             override fun onReceivedError(view: WebView?, errorCode: Int, description: String?, failingUrl: String?) {}
-        })
+        }
         //支持js
         //支持js
         mWebView.settings.javaScriptEnabled = true
