@@ -75,6 +75,7 @@ class WebActivity: AppCompatActivity() {
         mWebView.settings.builtInZoomControls = false
 
 
-        mWebView.loadUrl("http://static-www.gameschalo.com/endless-truck/index.html?pos=vid_lobby&browserType=2&ori=2")
+//        mWebView.loadUrl("http://static-www.gameschalo.com/endless-truck/index.html?pos=vid_lobby&browserType=2&ori=2")
+        mWebView.loadUrl("https://inpineapple.com/play/archeryking/uid_10500801/etr_galo_all?browserType=2")
     }
 }
