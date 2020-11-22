@@ -16,7 +16,7 @@
         <com.vgame.center.gradleplugindemo.ui.touch.SecondViewGroup
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@color/white">
+            android:background="@android:color/holo_green_light">
 
             <com.vgame.center.gradleplugindemo.ui.touch.InnerView
                 android:layout_width="100dp"
