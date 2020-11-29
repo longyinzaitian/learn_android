@@ -32,12 +32,22 @@ class SecondViewGroup : LinearLayout {
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        Log.i("Touch-SecondViewGroup", "onInterceptTouchEvent ->${MotionEvent.actionToString(ev?.action ?: 0)}\"")
+        Log.i("Touch-SecondViewGroup", "onInterceptTouchEvent ->${MotionEvent.actionToString(ev?.action ?: 0)} ${ev?.x}")
         val result = super.onInterceptTouchEvent(ev)
-        Log.i("Touch-SecondViewGroup", "onInterceptTouchEvent -> $result")
-        if (ev?.action == MotionEvent.ACTION_DOWN) {
-            return false
-        }
+        Log.i("Touch-SecondViewGroup", "onInterceptTouchEvent -> true")
+//        if (ev?.action == MotionEvent.ACTION_DOWN) {
+//            return result
+//        }
+//
+//        if (ev?.action == MotionEvent.ACTION_MOVE) {
+//            val x = ev.x
+//            if (x - 180F > 0) {
+//                return true
+//            } else if (x - 200F > 0) {
+//                return false
+//            }
+//        }
+
         return true
     }
 
@@ -46,6 +56,6 @@ class SecondViewGroup : LinearLayout {
         Log.i("Touch-SecondViewGroup", "onTouchEvent ->${MotionEvent.actionToString(event?.action ?: 0)}\"")
         val result = super.onTouchEvent(event)
         Log.i("Touch-SecondViewGroup", "onTouchEvent -> $result")
-        return true
+        return false
     }
 }

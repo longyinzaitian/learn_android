@@ -35,7 +35,7 @@ class InnerView: View {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         Log.i("Touch-InnerView", "onTouchEvent ->${MotionEvent.actionToString(event?.action ?: 0)}\"")
         val result = super.onTouchEvent(event)
-        Log.i("Touch-InnerView", "onTouchEvent -> $result")
+        Log.i("Touch-InnerView", "onTouchEvent -> true")
         return true
     }
 }

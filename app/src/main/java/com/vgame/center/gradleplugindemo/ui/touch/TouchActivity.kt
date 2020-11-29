@@ -33,6 +33,7 @@ class TouchActivity: AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        Log.i("Touch-TouchActivity", "===============================")
         Log.i("Touch-TouchActivity", "dispatchTouchEvent -> ${MotionEvent.actionToString(ev?.action?:0)}")
         val result = super.dispatchTouchEvent(ev)
         Log.i("Touch-TouchActivity", "dispatchTouchEvent -> $result")
