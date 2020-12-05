@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomAppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -14,13 +14,13 @@
             android:scaleType="centerCrop"
             android:src="@drawable/mm1"
             app:layout_scrollFlags="scroll" />
-    </com.google.android.material.appbar.AppBarLayout>
+    </com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomAppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomRecyclerView
         android:id="@+id/test_appbar_no_child_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+        app:layout_behavior=".ui.coordinator.widget.CustomScrollingViewBehavior" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomCoordinatorLayout>
