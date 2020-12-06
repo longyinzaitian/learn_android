@@ -69,6 +69,21 @@ class CustomAppBarBehavior : AppBarLayout.Behavior {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type)
     }
 
+    override fun onStopNestedScroll(coordinatorLayout: CoordinatorLayout, abl: AppBarLayout, target: View, type: Int) {
+        println("onStopNestedScroll -> type: $type")
+        super.onStopNestedScroll(coordinatorLayout, abl, target, type)
+    }
+
+    override fun onNestedScroll(coordinatorLayout: CoordinatorLayout, child: AppBarLayout, target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, type: Int, consumed: IntArray) {
+        println("onNestedScroll. dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, type: $type, consumed: $consumed")
+        super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type, consumed)
+    }
+
+    override fun onNestedPreScroll(coordinatorLayout: CoordinatorLayout, child: AppBarLayout, target: View, dx: Int, dy: Int, consumed: IntArray, type: Int) {
+        println("onNestedPreScroll. dx: $dx, dy: $dy, consumed: $consumed, type: $type")
+        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type)
+    }
+
     override fun onNestedPreScroll(coordinatorLayout: CoordinatorLayout, child: AppBarLayout, target: View, dx: Int, dy: Int, consumed: IntArray) {
         println("onNestedPreScroll, dx:$dx, dy:$dy, consumed:$consumed")
         super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed)

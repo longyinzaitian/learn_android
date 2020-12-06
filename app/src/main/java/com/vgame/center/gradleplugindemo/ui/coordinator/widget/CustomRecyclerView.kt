@@ -69,6 +69,44 @@ class CustomRecyclerView : RecyclerView {
         return res
     }
 
+    override fun startNestedScroll(axes: Int): Boolean {
+        println("startNestedScroll axes: $axes")
+        val res =  super.startNestedScroll(axes)
+        println("startNestedScroll. axes: $axes, res: $res")
+        return res
+    }
+
+    override fun startNestedScroll(axes: Int, type: Int): Boolean {
+        println("startNestedScroll. axes: $axes, type: $type")
+        val res = super.startNestedScroll(axes, type)
+        println("startNestedScroll. axes: $axes, type: $type, res: $res")
+        return res
+    }
+
+    override fun stopNestedScroll() {
+        println("stopNestedScroll")
+        super.stopNestedScroll()
+    }
+
+    override fun stopNestedScroll(type: Int) {
+        println("stopNestedScroll. type: $type")
+        super.stopNestedScroll(type)
+    }
+
+    override fun dispatchNestedFling(velocityX: Float, velocityY: Float, consumed: Boolean): Boolean {
+        println("dispatchNestedFling. velocityX: $velocityX, velocityY: $velocityY, consumed: $consumed")
+        val res = super.dispatchNestedFling(velocityX, velocityY, consumed)
+        println("dispatchNestedFling. velocityX: $velocityX, velocityY: $velocityY, consumed: $consumed, res: $res")
+        return res
+    }
+
+    override fun dispatchNestedPreFling(velocityX: Float, velocityY: Float): Boolean {
+        println("dispatchNestedPreFling. velocityX: $velocityX, velocityY: $velocityY")
+        val res = super.dispatchNestedPreFling(velocityX, velocityY)
+        println("dispatchNestedPreFling. velocityX: $velocityX, velocityY: $velocityY, res: $res")
+        return res
+    }
+
     override fun setNestedScrollingEnabled(enabled: Boolean) {
         super.setNestedScrollingEnabled(enabled)
         println("setNestedScrollingEnabled -> enable:$enabled")
