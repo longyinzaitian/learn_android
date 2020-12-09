@@ -42,36 +42,36 @@ class CustomRecyclerView : RecyclerView {
     }
 
     override fun dispatchNestedScroll(dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, offsetInWindow: IntArray?): Boolean {
-        println("dispatchNestedScroll -> dxConsumed:$dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: $offsetInWindow")
+        println("dispatchNestedScroll -> dxConsumed:$dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}")
         val res = super.dispatchNestedScroll(dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, offsetInWindow)
-        println("dispatchNestedScroll -> dxConsumed:$dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: $offsetInWindow, res: $res")
+        println("dispatchNestedScroll -> dxConsumed:$dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, res: $res")
         return res
     }
 
     override fun dispatchNestedScroll(dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, offsetInWindow: IntArray?, type: Int): Boolean {
-        println("dispatchNestedScroll -> dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: $offsetInWindow, type: $type")
+        println("dispatchNestedScroll -> dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type")
         val res = super.dispatchNestedScroll(dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, offsetInWindow, type)
-        println("dispatchNestedScroll -> dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: $offsetInWindow, type: $type, res: $res")
+        println("dispatchNestedScroll -> dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type, res: $res")
         return res
     }
 
     override fun dispatchNestedPreScroll(dx: Int, dy: Int, consumed: IntArray?, offsetInWindow: IntArray?): Boolean {
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: $offsetInWindow")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}")
         val res = super.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow)
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: $offsetInWindow, res: $res")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, res: $res")
         return res
     }
 
     override fun dispatchNestedPreScroll(dx: Int, dy: Int, consumed: IntArray?, offsetInWindow: IntArray?, type: Int): Boolean {
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: $offsetInWindow, type: $type")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type")
         val res = super.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow, type)
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: $offsetInWindow, type: $type, res: $res")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type, res: $res")
         return res
     }
 
     override fun startNestedScroll(axes: Int): Boolean {
         println("startNestedScroll axes: $axes")
-        val res =  super.startNestedScroll(axes)
+        val res = super.startNestedScroll(axes)
         println("startNestedScroll. axes: $axes, res: $res")
         return res
     }

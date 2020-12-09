@@ -75,18 +75,21 @@ class CustomCoordinatorLayout : CoordinatorLayout {
     }
 
     override fun onNestedScroll(target: View, dxConsumed: Int, dyConsumed: Int, dxUnconsumed: Int, dyUnconsumed: Int, type: Int, consumed: IntArray) {
-        println("onNestedScroll. dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, type: $type, consumed: $consumed")
+        println("onNestedScroll. dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, type: $type, consumed: ${consumed[0]}, ${consumed[1]}")
         super.onNestedScroll(target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, type, consumed)
+        println("onNestedScroll. dxConsumed: $dxConsumed, dyConsumed: $dyConsumed, dxUnconsumed: $dxUnconsumed, dyUnconsumed: $dyUnconsumed, type: $type, consumed: ${consumed[0]}, ${consumed[1]}")
     }
 
     override fun onNestedPreScroll(target: View, dx: Int, dy: Int, consumed: IntArray) {
-        println("onNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed")
+        println("onNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed[0]}, ${consumed[1]}")
         super.onNestedPreScroll(target, dx, dy, consumed)
+        println("onNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed[0]}, ${consumed[1]}")
     }
 
     override fun onNestedPreScroll(target: View, dx: Int, dy: Int, consumed: IntArray, type: Int) {
-        println("onNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, type: $type")
+        println("onNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed[0]}, ${consumed[1]}, type: $type")
         super.onNestedPreScroll(target, dx, dy, consumed, type)
+        println("onNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed[0]}, ${consumed[1]}, type: $type")
     }
 
     override fun onNestedFling(target: View, velocityX: Float, velocityY: Float, consumed: Boolean): Boolean {
