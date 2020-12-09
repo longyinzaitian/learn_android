@@ -44,12 +44,13 @@ class CustomScrollingViewBehavior : AppBarLayout.ScrollingViewBehavior {
     override fun onDependentViewChanged(parent: CoordinatorLayout, child: View, dependency: View): Boolean {
         println("onDependentViewChanged ")
         val stacks = Thread.currentThread().stackTrace
-        System.err.println("start############################################")
+        println("onDependentViewChanged -> start############################################")
         for (stack in stacks) {
-            System.err.println(stack.className + "\t\t\t\t" + stack.methodName)
+            println(stack.className + "\t\t\t\t" + stack.methodName)
         }
-        System.err.println("end#############################################")
-        return super.onDependentViewChanged(parent, child, dependency)
+        val res = super.onDependentViewChanged(parent, child, dependency)
+        println("onDependentViewChanged -> end############################################# res: $res")
+        return res
     }
 
     override fun onStartNestedScroll(coordinatorLayout: CoordinatorLayout, child: View, directTargetChild: View, target: View, axes: Int): Boolean {

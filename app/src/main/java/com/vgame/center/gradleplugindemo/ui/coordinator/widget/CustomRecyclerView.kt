@@ -56,16 +56,16 @@ class CustomRecyclerView : RecyclerView {
     }
 
     override fun dispatchNestedPreScroll(dx: Int, dy: Int, consumed: IntArray?, offsetInWindow: IntArray?): Boolean {
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed?.get(0)}, ${consumed?.get(1)}, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}")
         val res = super.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow)
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, res: $res")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed?.get(0)}, ${consumed?.get(1)}, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, res: $res")
         return res
     }
 
     override fun dispatchNestedPreScroll(dx: Int, dy: Int, consumed: IntArray?, offsetInWindow: IntArray?, type: Int): Boolean {
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed?.get(0)}, ${consumed?.get(1)}, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type")
         val res = super.dispatchNestedPreScroll(dx, dy, consumed, offsetInWindow, type)
-        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: $consumed, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type, res: $res")
+        println("dispatchNestedPreScroll, dx: $dx, dy: $dy, consumed: ${consumed?.get(0)}, ${consumed?.get(1)}, offsetInWindow: ${offsetInWindow?.get(0)}, ${offsetInWindow?.get(1)}, type: $type, res: $res")
         return res
     }
 
