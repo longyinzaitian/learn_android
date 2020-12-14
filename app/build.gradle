@@ -5,11 +5,11 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.vgame.center.gradleplugindemo"
+        applicationId "com.wingo.quiz"
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,6 +43,11 @@ dependencies {
     implementation "androidx.core:core-ktx:1.3.2"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.inmobi.monetization:inmobi-ads:9.1.1'
+    //noinspection GradleCompatible
+    api 'com.android.support:customtabs:28.0.0'
+    api 'com.squareup.picasso:picasso:2.71828'
 
     implementation project(':slot')
 
