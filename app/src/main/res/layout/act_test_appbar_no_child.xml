@@ -21,6 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_behavior=".ui.coordinator.widget.CustomScrollingViewBehavior" />
+        app:layout_behavior="com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomScrollingViewBehavior" />
 
 </com.vgame.center.gradleplugindemo.ui.coordinator.widget.CustomCoordinatorLayout>

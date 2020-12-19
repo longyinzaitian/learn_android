@@ -27,9 +27,9 @@ class CustomRecyclerView : RecyclerView {
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onInterceptTouchEvent(e: MotionEvent?): Boolean {
-        println("onTouchEvent -> action: ${MotionEvent.actionToString(e!!.action)}")
+        println("onInterceptTouchEvent -> action: ${MotionEvent.actionToString(e!!.action)}")
         val res = super.onInterceptTouchEvent(e)
-        println("onTouchEvent -> action: ${MotionEvent.actionToString(e!!.action)}, res: $res")
+        println("onInterceptTouchEvent -> action: ${MotionEvent.actionToString(e!!.action)}, res: $res")
         return res
     }
 
@@ -38,6 +38,14 @@ class CustomRecyclerView : RecyclerView {
         println("onTouchEvent -> action: ${MotionEvent.actionToString(e!!.action)}")
         val res = super.onTouchEvent(e)
         println("onTouchEvent -> action: ${MotionEvent.actionToString(e!!.action)}, res: $res")
+        return res
+    }
+
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        println("dispatchTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}")
+        val res = super.dispatchTouchEvent(ev)
+        println("dispatchTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}, res: $res")
         return res
     }
 

@@ -124,6 +124,14 @@ class CustomCoordinatorLayout : CoordinatorLayout {
         return res
     }
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        println("dispatchTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}")
+        val res = super.dispatchTouchEvent(ev)
+        println("dispatchTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}, res: $res")
+        return res
+    }
+
     private fun println(msg: String) {
         Log.i(TAG, msg)
     }

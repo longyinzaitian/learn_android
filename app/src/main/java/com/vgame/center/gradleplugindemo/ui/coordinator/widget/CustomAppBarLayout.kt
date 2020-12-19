@@ -43,4 +43,12 @@ class CustomAppBarLayout: AppBarLayout {
         Log.i(TAG, "onInterceptTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}, res: $res")
         return res
     }
+
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        Log.i(TAG,"dispatchTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}")
+        val res = super.dispatchTouchEvent(ev)
+        Log.i(TAG,"dispatchTouchEvent -> action: ${MotionEvent.actionToString(ev!!.action)}, res: $res")
+        return res
+    }
 }
