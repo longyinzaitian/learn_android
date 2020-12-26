@@ -5,7 +5,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.wingo.quiz"
+        applicationId "com.gradle.demo"
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
